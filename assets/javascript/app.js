@@ -18,7 +18,10 @@ $(document).ready(function){
 //hide the game container until game start
 
 $("#game_container").hide();
+
 //game over container hide
+
+$("game_over_container").hide();
 
 //set the on-click function for the begin button
 
@@ -78,220 +81,232 @@ function endTime(){
 
 //Check what's entered by the user into each question
 
-	var q1 = $('input:radio[name="q1"]:checked').val();
-	var q2 = $('input:radio[name="q2"]:checked').val();
-	var q3 = $('input:radio[name="q3"]:checked').val();
-	var q4 = $('input:radio[name="q4"]:checked').val();
-	var q5 = $('input:radio[name="q5"]:checked').val();
-	var q6 = $('input:radio[name="q6"]:checked').val();
-	var q7 = $('input:radio[name="q7"]:checked').val();
-	var q8 = $('input:radio[name="q8"]:checked').val();
-	var q9 = $('input:radio[name="q9"]:checked').val();
-	var q10 = $('input:radio[name="q10"]:checked').val();
+var q1 = $('input:radio[name="q1"]:checked').val();
+var q2 = $('input:radio[name="q2"]:checked').val();
+var q3 = $('input:radio[name="q3"]:checked').val();
+var q4 = $('input:radio[name="q4"]:checked').val();
+var q5 = $('input:radio[name="q5"]:checked').val();
+var q6 = $('input:radio[name="q6"]:checked').val();
+var q7 = $('input:radio[name="q7"]:checked').val();
+var q8 = $('input:radio[name="q8"]:checked').val();
+var q9 = $('input:radio[name="q9"]:checked').val();
+var q10 = $('input:radio[name="q10"]:checked').val();
 
 //increase the right or wrong count depending on the user's input
 //Is there a better way to do this? This took forever and is hard to read
 
 //Question 1
 
-	if(q1 == undefined){
+if(q1 == undefined){
 
-		wrongCount++;
+	wrongCount++;
 
 }
 
-	else if(q1 == "Beer"){
+else if(q1 == "Beer"){
 
-		rightCount++;
+	rightCount++;
 
-	}
+}
 
-	else{
+else{
 
-		wrongCount++;
+	wrongCount++;
 
-	}
+}
 
 //Question 2
 
-	if(q2 == undefined){
+if(q2 == undefined){
 
-		wrongCount++;
+	wrongCount++;
 
 }
 
-	else if(q2== "Eat the frogs"){
+else if(q2== "Eat the frogs"){
 
-		rightCount++;
+	rightCount++;
 
-	}
+}
 
-	else{
+else{
 
-		wrongCount++;
+	wrongCount++;
 
-	}
+}
 
 //Question 3
 
-	if(q3 == undefined){
+if(q3 == undefined){
 
-		wrongCount++;
+	wrongCount++;
 
 }
 
-	else if(q3 == "Must bounce when dropped"){
+else if(q3 == "Must bounce when dropped"){
 
-		rightCount++;
+	rightCount++;
 
-	}
+}
 
-	else{
+else{
 
-		wrongCount++;
+	wrongCount++;
 
-	}
+}
 
 //Question 4
 
-	if(q4 == undefined){
+if(q4 == undefined){
 
-		wrongCount++;
+	wrongCount++;
 
 }
 
-	else if(q4 == "Curse or using profane language"){
+else if(q4 == "Curse or using profane language"){
 
-		rightCount++;
+	rightCount++;
 
-	}
+}
 
-	else{
+else{
 
-		wrongCount++;
+	wrongCount++;
 
-	}
+}
 
 //Question 5
 
-	if(q5 == undefined){
+if(q5 == undefined){
 
-		wrongCount++;
+	wrongCount++;
 
 }
 
-	else if(q5 == "Cannibalism"){
+else if(q5 == "Cannibalism"){
 
-		rightCount++;
+	rightCount++;
 
-	}
+}
 
-	else{
+else{
 
-		wrongCount++;
+	wrongCount++;
 
-	}
+}
 
 //Question 6
 
-	if(q6 == undefined){
+if(q6 == undefined){
 
-		wrongCount++;
+	wrongCount++;
 
 }
 
-	else if(q6 == "Catch fish"){
+else if(q6 == "Catch fish"){
 
-		rightCount++;
+	rightCount++;
 
-	}
+}
 
-	else{
+else{
 
-		wrongCount++;
+	wrongCount++;
 
-	}
+}
 
 //Question 7
 
-	if(q7 == undefined){
+if(q7 == undefined){
 
-		wrongCount++;
+	wrongCount++;
 
 }
 
-	else if(q7 == "Rabbits"){
+else if(q7 == "Rabbits"){
 
-		rightCount++;
+	rightCount++;
 
-	}
+}
 
-	else{
+else{
 
-		wrongCount++;
+	wrongCount++;
 
-	}
+}
 
 //Question 8
 
-	if(q8 == undefined){
+if(q8 == undefined){
 
-		wrongCount++;
+	wrongCount++;
 
 }
 
-	else if(q8 == "Golf balls"){
+else if(q8 == "Golf balls"){
 
-		rightCount++;
+	rightCount++;
 
-	}
+}
 
-	else{
+else{
 
-		wrongCount++;
+	wrongCount++;
 
-	}
+}
 
 //Question 9
 
-	if(q9 == undefined){
+if(q9 == undefined){
 
-		wrongCount++;
+	wrongCount++;
 
 }
 
-	else if(q9 == "Throwing objects"){
+else if(q9 == "Throwing objects"){
 
-		rightCount++;
+	rightCount++;
 
-	}
+}
 
-	else{
+else{
 
-		wrongCount++;
+	wrongCount++;
 
-	}
+}
 
 //Question 10
 
-	if(q10 == undefined){
+if(q10 == undefined){
 
-		wrongCount++;
+	wrongCount++;
 
 }
 
-	else if(q10 == "Play pinball machines"){
+else if(q10 == "Play pinball machines"){
 
-		rightCount++;
+	rightCount++;
 
-	}
+}
 
-	else{
+else{
 
-		wrongCount++;
+	wrongCount++;
 
-	}
+}
 
+$("#right_answers").html(rightCount);
+$("#wrong_answers").html(wrongCount);
+
+	//show the end of the game container
+
+	$("#game_over_container").show();
+
+}
+
+});
+
+	//
 
 //Copyright 2017 Evan Darst
 //Use limited to educational use only
