@@ -14,13 +14,31 @@ var wrongCount = 0;
 
 //ALL GAME FUNCTIONS
 
+$(document).ready(function){
 
+//hide the game container until game start
+
+$("#game_container").hide();
 
 //set the on-click function for the begin button
 
+
+$("#begin_button").on("click", function(){
+
+	//hide the start container from user
+
+	$("#begin_game_container").hide();
+
+	//show user the game container
+
+	$("#game_container").show();
+
+	
+}
 
 
 //un-hide the game_container
 
 
 
+}
