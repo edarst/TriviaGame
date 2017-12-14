@@ -1,3 +1,10 @@
+body {
+
+	text-align: center;
+	background-image: url("../images/question-marks-background.jpeg");
+
+}
+
 .h1 {
 
 	font-size: 30px;
