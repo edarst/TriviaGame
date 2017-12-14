@@ -19,6 +19,7 @@ $(document).ready(function){
 //hide the game container until game start
 
 $("#game_container").hide();
+//game over container hide
 
 //set the on-click function for the begin button
 
@@ -33,12 +34,24 @@ $("#begin_button").on("click", function(){
 
 	$("#game_container").show();
 
-	
-}
+	//start the countdown function
+
+	startCountdown();
+	return;
 
 
-//un-hide the game_container
+});
 
+//lower countdown function
 
+function countdown(){
+
+	//Decrement count by 1 for user
+
+	count--;
+
+	//passing the count to the assigned ID
+
+	$("#time_number").html(count + " seconds");
 
 }
