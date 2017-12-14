@@ -1,5 +1,4 @@
-//Copyright 2017 Evan Darst
-//Use limited to educational use only
+//Trivia game
 
 //Set a timer for the game
 
@@ -292,3 +291,7 @@ function endTime(){
 		wrongCount++;
 
 	}
+
+
+//Copyright 2017 Evan Darst
+//Use limited to educational use only
