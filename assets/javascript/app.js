@@ -75,7 +75,7 @@ function startCountdown(){
 
 	setInterval(countdown, 1000);
 
-	//Do I need to clearInterval here? I'm trying to get it to work, no dice.
+	//Not sure if clearInterval is needed here.
 
 }
 
@@ -310,7 +310,7 @@ $("#wrong_answers").html(wrongCount);
 
 $("#gamover").on("click", function(){
 
-	//Is this where clearInterval goes?
+	//show results of right and wrong answers to user. I think this is where clearInterval is supposed to come into play.
 } 
 
 	//
