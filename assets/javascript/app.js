@@ -54,4 +54,29 @@ function countdown(){
 
 	$("#time_number").html(count + " seconds");
 
+	//end game if timer equals 0
+
+	if(count == -1){
+
+		endTime();
+
+		//hide the game container
+
+		$("game_container").hide();
+	}
+
+}
+
+//This increments the countdown by 1 second for the user
+
+function startCountdown(){
+
+	setInterval(countdown, 1000);
+
+}
+
+function endTime(){
+
+
+	
 }
