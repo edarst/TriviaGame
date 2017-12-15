@@ -2,318 +2,325 @@
 
 //Set a timer for the game
 
-var timer = 60*1000;
+var timer = 60 * 1000;
 
 //global variables for the number of correct and incorrect responses
 
 var counter = 60;
 var rightCount = 0;
 var wrongCount = 0;
+var count = 60;
+
 
 
 //ALL GAME FUNCTIONS
-
-$(document).ready(function){
+$(document).ready(function () {
 
 //hide the game container until game start
 
-$("#game_container").hide();
+    $("#game_container").hide();
 
 //game over container hide
 
-$("game_over_container").hide();
+    $("#game_over_container").hide();
 
 //set the on-click function for the begin button
 
 
-$("#begin_button").on("click", function(){
+    $("#begin_button").on("click", function () {
 
-	//hide the start container from user
+        //hide the start container from user
 
-	$("#begin_game_container").hide();
+        $("#begin_game_container").hide();
 
-	//show user the game container
+        //show user the game container
 
-	$("#game_container").show();
+        $("#game_container").show();
 
-	//start the countdown function
+        //start the countdown function
 
-	startCountdown();
-	return;
+        startCountdown();
+        return;
 
 
-});
+    });
 
 //lower countdown function
 
-function countdown(){
+    function countdown() {
 
-	//Decrement count by 1 for user
+        //Decrement count by 1 for user
 
-	count--;
+        count--;
 
-	//passing the count to the assigned ID
+        //passing the count to the assigned ID
 
-	$("#time_number").html(count + " seconds");
+        $("#time_number").html(count + " seconds");
 
-	//end game if timer equals 0
+        //end game if timer equals 0
 
-	if(count == -1){
+        if (count == -1) {
 
-		endTime();
+            endTime();
 
-		//hide the game container
+            //hide the game container
 
-		$("game_container").hide();
-	}
+            $("game_container").hide();
+        }
 
-}
+    }
 
 //This increments the countdown by 1 second for the user
 
-function startCountdown(){
+    function startCountdown() {
 
-	setInterval(countdown, 1000);
+        setInterval(countdown, 1000);
 
-	//Not sure if clearInterval is needed here.
+        //Not sure if clearInterval is needed here.
 
-}
+    }
 
-function endTime(){
+    function endTime() {
 
 //Check what's entered by the user into each question
 
-var q1 = $('input:radio[name="q1"]:checked').val();
-var q2 = $('input:radio[name="q2"]:checked').val();
-var q3 = $('input:radio[name="q3"]:checked').val();
-var q4 = $('input:radio[name="q4"]:checked').val();
-var q5 = $('input:radio[name="q5"]:checked').val();
-var q6 = $('input:radio[name="q6"]:checked').val();
-var q7 = $('input:radio[name="q7"]:checked').val();
-var q8 = $('input:radio[name="q8"]:checked').val();
-var q9 = $('input:radio[name="q9"]:checked').val();
-var q10 = $('input:radio[name="q10"]:checked').val();
+        var q1 = $('input:radio[name="q1"]:checked').val();
+        var q2 = $('input:radio[name="q2"]:checked').val();
+        var q3 = $('input:radio[name="q3"]:checked').val();
+        var q4 = $('input:radio[name="q4"]:checked').val();
+        var q5 = $('input:radio[name="q5"]:checked').val();
+        var q6 = $('input:radio[name="q6"]:checked').val();
+        var q7 = $('input:radio[name="q7"]:checked').val();
+        var q8 = $('input:radio[name="q8"]:checked').val();
+        var q9 = $('input:radio[name="q9"]:checked').val();
+        var q10 = $('input:radio[name="q10"]:checked').val();
 
 //increase the right or wrong count depending on the user's input
 //Is there a better way to do this? This took forever and is hard to read
 
 //Question 1
 
-if(q1 == undefined){
+        if (q1 == undefined) {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-else if(q1 == "Beer"){
+        else if (q1 == "Beer") {
 
-	rightCount++;
+            rightCount++;
 
-}
+        }
 
-else{
+        else {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
 //Question 2
 
-if(q2 == undefined){
+        if (q2 == undefined) {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-else if(q2== "Eat the frogs"){
+        else if (q2 == "Eat the frogs") {
 
-	rightCount++;
+            rightCount++;
 
-}
+        }
 
-else{
+        else {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
 //Question 3
 
-if(q3 == undefined){
+        if (q3 == undefined) {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-else if(q3 == "Must bounce when dropped"){
+        else if (q3 == "Must bounce when dropped") {
 
-	rightCount++;
+            rightCount++;
 
-}
+        }
 
-else{
+        else {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
 //Question 4
 
-if(q4 == undefined){
+        if (q4 == undefined) {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-else if(q4 == "Curse or using profane language"){
+        else if (q4 == "Curse or using profane language") {
 
-	rightCount++;
+            rightCount++;
 
-}
+        }
 
-else{
+        else {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
 //Question 5
 
-if(q5 == undefined){
+        if (q5 == undefined) {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-else if(q5 == "Cannibalism"){
+        else if (q5 == "Cannibalism") {
 
-	rightCount++;
+            rightCount++;
 
-}
+        }
 
-else{
+        else {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
 //Question 6
 
-if(q6 == undefined){
+        if (q6 == undefined) {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-else if(q6 == "Catch fish"){
+        else if (q6 == "Catch fish") {
 
-	rightCount++;
+            rightCount++;
 
-}
+        }
 
-else{
+        else {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
 //Question 7
 
-if(q7 == undefined){
+        if (q7 == undefined) {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-else if(q7 == "Rabbits"){
+        else if (q7 == "Rabbits") {
 
-	rightCount++;
+            rightCount++;
 
-}
+        }
 
-else{
+        else {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
 //Question 8
 
-if(q8 == undefined){
+        if (q8 == undefined) {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-else if(q8 == "Golf balls"){
+        else if (q8 == "Golf balls") {
 
-	rightCount++;
+            rightCount++;
 
-}
+        }
 
-else{
+        else {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
 //Question 9
 
-if(q9 == undefined){
+        if (q9 == undefined) {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-else if(q9 == "Throwing objects"){
+        else if (q9 == "Throwing objects") {
 
-	rightCount++;
+            rightCount++;
 
-}
+        }
 
-else{
+        else {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
 //Question 10
 
-if(q10 == undefined){
+        if (q10 == undefined) {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-else if(q10 == "Play pinball machines"){
+        else if (q10 == "Play pinball machines") {
 
-	rightCount++;
+            rightCount++;
 
-}
+        }
 
-else{
+        else {
 
-	wrongCount++;
+            wrongCount++;
 
-}
+        }
 
-$("#right_answers").html(rightCount);
-$("#wrong_answers").html(wrongCount);
+        $("#right_answers").html(rightCount);
+        $("#wrong_answers").html(wrongCount);
 
-	//show the end of the game container
+        //show the end of the game container
 
-	$("#game_over_container").show();
+        $("#game_over_container").show();
 
-}
+    }
 
+    function stop() {
+        clearInterval(setInterval());
+        timer = 60;
+    };
+
+
+    $("#gameover").on("click", function (event) {
+        event.preventDefault();
+        endTime();
+        stop();
+        //show results of right and wrong answers to user. I think this is where clearInterval is supposed to come into play.
+    });
 });
-
-$("#gamover").on("click", function(){
-
-	//show results of right and wrong answers to user. I think this is where clearInterval is supposed to come into play.
-} 
-
-	//
+//
 
 //Copyright 2017 Evan Darst
 //Use limited to educational use only
